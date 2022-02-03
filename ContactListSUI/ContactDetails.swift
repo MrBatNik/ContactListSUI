@@ -12,10 +12,13 @@ struct ContactDetails: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "person.fill")
-                .resizable()
-                .frame(width: 150, height: 150)
             List {
+                HStack {
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                }
+                .frame(maxWidth: .infinity)
                 ContactInfo(person: person, info: .phone)
                 ContactInfo(person: person, info: .email)
             }
