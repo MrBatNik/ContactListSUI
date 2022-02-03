@@ -19,7 +19,7 @@ struct ContentView: View {
                 Image(systemName: "person.3")
                 Text("Contacts")
             }
-            NavigationView{
+            NavigationView {
                 Numbers(persons: persons)
             }
             .tabItem {
